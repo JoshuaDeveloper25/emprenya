@@ -1,0 +1,313 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.emprenya-inicia-negocio {
+    // Inicia Tu Propio Negocio - SECTION
+    &__header {
+        background: url(../img/inicia-negocio-header.png);
+        background-position: center top;
+        background-size: cover;
+        height: 39.9375rem;
+        color: $c-white;
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        // 1110px
+        @include for-size(69.375em) {
+            padding: 0 1.5rem;
+        }
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        align-items: last baseline;
+        margin-bottom: 4rem;
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 2rem;
+        }
+    }
+
+    &__line {
+        background-color: $c-white;
+        display: inline-block;
+        width: 10rem;
+        height: .4rem;
+        margin: 0 6rem 0 2rem;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+
+        // 519px
+        @include for-size(32.4375em) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+
+    // Inicia Tu Negocio Con EmprenYA - SECTION
+    &__emprenya {
+
+        &-firstSummary {
+            background: $c-white;
+            padding: 5rem 3rem 3rem 3rem;
+            height: 100%;
+            border-top-left-radius: 3.125rem;
+            border-bottom-left-radius: 3.125rem;
+            box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+
+            // 768px
+            @include for-size(48em) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        &-firstP {
+            // 962px
+            @include for-size(60.125em) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-firstImage {
+            max-width: 28.9375rem;
+            max-height: 32.0625rem;
+
+            // 768px
+            @include for-size(48em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-firstImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-secondColumnBg {
+            background: url(../img/emprenya-shapes.png);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        &-secondColumnTitle {
+            color: $c-primary;
+        }
+
+        &-secondColumnImage {
+            max-width: 34.5rem;
+            // height: 39.9375rem;
+
+            // 768px
+            @include for-size(48em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-secondColumnImg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Tu Éxito, Nuestro Compromiso - SECTION
+    &__compromiso {
+        background: url(../img/compromiso-shapes.png);
+        background-position: center center;
+        background-size: cover;
+        margin-top: 5rem;
+
+        &-content {
+            color: $c-white;
+        }
+
+        &-title {
+            max-width: 32rem;
+            
+            // 810px
+            @include for-size(50.625em) {
+                font-size: 2.5rem;
+                padding-top: 1rem;
+            }
+
+             // 768px
+             @include for-size(48em) {
+                max-width: 100%;
+            }
+        }
+
+        &-p {
+            color: $c-secondary;
+            max-width: 32rem;
+            font-style: normal;
+            line-height: 2.25rem;
+            /* 150% */
+            margin: 1.8rem 0;
+
+            // 810px
+            @include for-size(50.625em) {
+                font-size: 1.4rem;
+            }
+
+             // 768px
+             @include for-size(48em) {
+                max-width: 100%;
+            }
+        
+        }
+
+        &-image {
+            max-width: 34.5rem;
+            max-height: 46.88681rem;
+
+            // 768px
+            @include for-size(48em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    // ¿Cómo Funciona? - SECTION
+    &__funcionalidad {
+        background: $c-light-white;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &-subheading {
+            max-width: 75rem;
+            margin: 2rem auto 0 auto;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &-icon {
+            width: 5.9375rem;
+            height: 5.9375rem;
+        }
+
+        &-titleCard {
+            color: $c-primary;
+            font-style: normal;
+            line-height: normal;
+            margin: 2rem 0;
+        }
+
+        &-contentCard {
+            color: $c-gray;
+            font-style: normal;
+            line-height: 1.75;
+            padding: 0 1rem;
+        }
+    }
+
+    //  Nuestro Compromiso con Valores Inquebrantables: Tu Garantía de Excelencia - SECTION
+    &__excelencia {
+        background-image: url(../img/excelencia-shapes.png);
+        background-position: center center;
+        background-size: cover;
+
+        &-shapes {
+            position: relative;
+        }
+
+        &-shape1 {
+            position: absolute;
+            z-index: -200;
+            top: 8rem;
+            left: -12%;
+        }
+
+        &-shape1Img {
+            width: 16.7rem;
+        }
+
+        &-shape2 {
+            position: absolute;
+            z-index: -200;
+            top: 18rem;
+            right: -10%;
+        }
+
+        &-shape2Img {
+            width: 18.9rem;
+        }
+
+        &-position {
+            max-width: 80.25rem;
+            margin: 0 auto;
+        }
+     
+        &-image {
+            background-image: url(../img/excelencia-img.png);
+            background-position: 50% 50%;
+            background-size: cover;
+            height: 38.5rem;
+            // width: 80.25rem;
+        }
+
+        &-image-title {
+            padding: 4.5rem;
+            max-width: 80rem;
+
+            @include for-size(29.375em) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &-content {
+            box-shadow: 0 1.5rem 2.5rem 0 rgba(0, 0, 0, 0.07);
+            padding: 2.5rem 3rem;
+        }
+
+        &-p {
+        }
+    }
+    
+    //  Forma Parte de Algo Más Grande - SECTION
+    &__invitacion {
+        background: $c-dark-white;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        &-p {
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+
+        &-image {
+            margin: 0 auto;
+            max-width: 58.875rem;
+            // height: 32.375rem;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+// IN GENERAL
+.container-large {
+    max-width: 105rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+// FOR THE MENU
+.active {
+    background: $c-primary-dark;
+}
+
+.carousel-item.active {
+    background-color: transparent;
+}
+
+.login {
+    background: $c-primary-dark-2;
+}
+
+// PADDING HORIZONTALLY
+
+.px-1-5-md {
+
+    // 1110px
+    @include for-size(69.375em) {
+        padding: 0 1.5rem;
+    }
+}
+
+// TITLES!
+.maintitle-section {
+    text-align: center;
+    padding: 2.7rem 0;
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        color: $c-primary;
+        font-size: 2.8125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        // 472px
+        @include for-size(29.5em) {
+            display: unset;
+        }
+
+        // 413px
+        @include for-size(25.8125em) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // 324px 
+        @include for-size(20.25em) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        max-width: 15.48744rem;
+        max-height: 3.4375rem;
+        margin-left: 1rem;
+
+        // 472px
+        @include for-size(29.5em) {
+            display: inline-block;
+        }
+    }
+
+    &__imageConfiar {
+        max-width: 22.39144rem;
+        max-height: 5.01319rem;
+        margin-left: 1rem;
+
+        // 472px
+        @include for-size(29.5em) {
+            display: inline-block;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.maintitle-section-alternative {
+    text-align: center;
+    padding: 2.7rem 0;
+}
+
+.maintitle-section-alternative-heading {
+    color: $c-primary;
+    font-size: 2.8125rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.border-right-blue {
+    border-right: 1px solid $c-primary-light;
+}
+
+.border-right-dark-white {
+    border-right: 1px solid $c-dark-white;
+}
+
+// BUTTONS (BLUE, WHITE, BLUE TRANSPARENT)
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: .8rem 1.4rem;
+    border-radius: .2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.button-blue {
+    color: $c-white;
+    background: $c-primary;
+}
+
+.button-blue-transparent {
+    color: $c-white;
+    background: $c-primary-transparent;
+    font-size: 1.5rem;
+}
+
+.button-white {
+    color: $c-primary;
+    background: $c-white;
+}
+
+// FONT WEIGHTS
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+// MARGINS
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.mb-8 {
+    margin-bottom: 8rem;
+}
+
+.pb-6 {
+    padding-bottom: 6rem;
+}

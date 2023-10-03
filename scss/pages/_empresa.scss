@@ -1,0 +1,199 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.emprenya-empresa {
+
+    // Nosotros - SECTION
+    &__header {
+        background: url(../img/nosotros-header.png);
+        background-position: center top;
+        background-size: cover;
+        height: 39.9375rem;
+        color: $c-white;
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        // 1110px
+        @include for-size(69.375em) {
+            padding: 0 1.5rem;
+        }
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        align-items: last baseline;
+        margin-bottom: 4rem;
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 2rem;
+        }
+    }
+
+    &__line {
+        background-color: $c-white;
+        display: inline-block;
+        width: 10rem;
+        height: .4rem;
+        margin: 0 6rem 0 2rem;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+
+        // 519px
+        @include for-size(32.4375em) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+
+    // Tu Vida, Nuestra Misión: Mejorar Siempre - SECTION
+    &__features {
+
+        // FIRST ARTICLE INFO
+        &-firstInfo {
+            font-style: normal;
+            line-height: 2.25rem;
+
+            @include for-size(54.375em) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-firstImage {
+            max-width: 35.125rem;
+
+            @include for-size(48em) {
+                margin: 0 auto 1.5rem auto;
+            }
+        }
+
+        &-firstImg {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        // SECOND ARTICLE INFO
+        &-background {
+            background: url('../img/afiliar-shapes.png');
+            background-position: bottom;
+            background-size: cover;
+        }
+
+        &-secondInfo {
+            max-width: 33rem;
+            font-style: normal;
+            line-height: 2.25rem;
+
+            @include for-size(54.375em) {
+                font-size: 1.2rem;
+            }
+
+            @include for-size(48em) {
+                margin: 1.2rem auto 0 auto;
+                max-width: 100%;
+            }
+        }
+
+        &-secondImage {
+            max-width: 34.5rem;
+
+            @include for-size(54.375em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-secondImg {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Carta del Fundador y Presidente - SECTION
+    &__message {
+        background: url(../img/bg-message.png);
+        background-position: center center;
+        background-size: cover;
+
+        &-content {
+            padding-bottom: 4rem;
+        }
+
+        &-text {
+            color: $c-gray;
+            text-align: justify;
+            font-style: normal;
+            margin-bottom: 1.5rem;
+        }
+
+        &-by {
+            font-style: normal;
+            line-height: 1.75rem;
+        }
+
+        &-who {
+            font-style: normal;
+            line-height: 1.75rem;
+        }
+    }
+
+    // Nuestros Valores - SECTION
+    &__valores {
+        background: url(../img/bg-valores.png);
+        background-position: center center;
+        background-size: cover;
+        padding: 2.5rem 0;
+
+        &-content {
+            color: $c-white;
+        }
+
+        &-title {
+            color: $c-secondary;
+            font-style: normal;
+            line-height: normal;
+
+            @include for-size(25.1875em) {
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+
+        &-arrowIcon {
+            max-width: 1.53125rem;
+            max-height: 1.34056rem;
+            margin-right: 1.5rem;
+        }
+
+        &-p {
+            font-style: normal;
+            line-height: 1.875rem;
+            /* 150% */
+        }
+
+        &-image {
+            width: 5.625rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @include for-size('tablet-portrait-up') {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+}

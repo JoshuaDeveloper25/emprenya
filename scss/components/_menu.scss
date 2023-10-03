@@ -1,0 +1,109 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.emprenya-menu {
+    background-color: $c-primary;
+    color: $c-white;
+
+    // 1110px
+    @include for-size(69.375em) {
+        padding: 0 1.5rem;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // 840px
+        @include for-size(52.5em) {
+            flex-direction: column;
+        }
+
+        // 515px
+        @include for-size(32.1875em) {
+            padding: 1rem 0;
+        }
+    }
+
+    &__gmail {
+        color: $c-white;
+
+        // 890px
+        @include for-size(55.625em) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        // 840px
+        @include for-size(52.5em) {
+            margin-top: 1.5rem;
+        }
+
+        // 515px
+        @include for-size(32.1875em) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        list-style: none;
+
+        // 515px
+        @include for-size(32.1875em) {
+            border-right: none;
+            margin: 1rem 0;
+        }
+    }
+
+    &__links {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        color: $c-white;
+        font-weight: 500;
+
+        // 890px
+        @include for-size(55.625em) {
+            font-size: 1.1rem;
+        }
+
+        // 651px
+        @include for-size(40.6875em) {
+            padding-right: .5rem;
+            padding-left: .5rem;
+        }
+
+        // 515px
+        @include for-size(32.1875em) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__login {
+        background: $c-primary-dark-2;
+
+        &-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            color: $c-white;
+            padding: .5rem 0;
+        }
+
+        &-icon {
+            margin-left: .6rem;
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}

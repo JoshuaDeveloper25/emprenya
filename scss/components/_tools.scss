@@ -1,0 +1,55 @@
+@use '../abstracts/mixins' as *;
+
+.emprenya-tools {
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5rem 0;
+
+        // 1110px
+        @include for-size(69.375em) {
+            padding: 0 1.5rem;
+        }
+
+        @include for-size('tablet-landscape-up') {
+            flex-direction: column;
+        }
+    }
+
+    &__main-logo {
+        height: 4.9rem;
+        width: 22.1rem;
+
+        @include for-size('tablet-landscape-up') {
+            margin-bottom: 2rem;
+        }
+
+        // 448px
+        @include for-size(28em) {
+            height: 4rem;
+            width: 15rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__ya {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        // 448px
+        @include for-size(28em) {
+            flex-direction: column;
+        }
+
+        &-image {
+            text-align: center;
+        }
+
+        &-img {
+            height: 2.3rem;
+        }
+    }
+}

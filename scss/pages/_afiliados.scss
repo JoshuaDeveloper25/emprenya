@@ -1,0 +1,244 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.emprenya-afiliados {
+
+    // Cómo ser parte? - SECTION
+    &__header {
+        background: url(../img/afiliar-header.png);
+        background-position: center top;
+        background-size: cover;
+        height: 39.9375rem;
+        color: $c-white;
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        // 1110px
+        @include for-size(69.375em) {
+            padding: 0 1.5rem;
+        }
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        align-items: last baseline;
+        margin-bottom: 4rem;
+
+        // 519px
+        @include for-size(32.4375em) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 2rem;
+        }
+    }
+
+    &__line {
+        background-color: $c-white;
+        display: inline-block;
+        width: 10rem;
+        height: .4rem;
+        margin: 0 6rem 0 2rem;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+
+        // 519px
+        @include for-size(32.4375em) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+
+    // Cómo afiliarme a emprenYA - SECTION
+    &__afiliarme {
+
+        // FIRST ARTICLE INFO
+        &-firstInfo {
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2.25rem;
+
+            // 870px
+            @include for-size(54.375em) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-firstImage {
+            max-width: 35.125rem;
+            max-height: 23.8125rem;
+
+            // 768px
+            @include for-size(48em) {
+                margin: 1.5rem auto 0 auto;
+            }
+        }
+
+        &-firstImg {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-extraInfo {
+            margin: 0 auto;
+            max-width: 90rem;
+        }
+
+        &-extraInfoText {
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            // 1110px
+            @include for-size(69.375em) {
+                text-align: center;
+            }
+        }
+
+        &-extraInfoTwo {
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+        &-extraInfoTwoText {
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            // 1110px
+            @include for-size(69.375em) {
+                text-align: center;
+            }
+        }
+
+        // SECOND ARTICLE INFO
+        &-background {
+            background: url('../img/afiliar-shapes.png');
+            background-position: center center;
+            background-size: cover;
+        }
+
+        &-secondInfo {
+            max-width: 37rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.25rem;
+
+            // 870px
+            @include for-size(54.375em) {
+                font-size: 1.2rem;
+            }
+
+            // 768px
+            @include for-size(48em) {
+                margin: .7rem auto 0 auto;
+            }
+        }
+
+        &-secondImage {
+            max-width: 34.5rem;
+            max-height: 24.4375rem;
+
+            // 870px
+            @include for-size(54.375em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-secondImg {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Explora, Comparte, Triunfa - SECTION
+    &__futuro {
+
+        &-subheading {
+            max-width: 75rem;
+            margin: 2rem auto 0 auto;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &-icon {
+            width: 5.9375rem;
+            height: 5.9375rem;
+        }
+
+        &-titleCard {
+            color: $c-primary;
+            font-style: normal;
+            line-height: normal;
+            margin: 1rem 0;
+        }
+
+        &-contentCard {
+            color: $c-gray;
+            font-style: normal;
+            line-height: 1.75rem;
+        }
+    }
+
+    // Tu Oficina Virtual: Tu Aliada en el Éxito - SECTION
+    &__oficina {
+        background: url(../img/oficina-background.png);
+        background-position: center center;
+        background-size: cover;
+
+        &-content {
+            color: $c-white;
+        }
+
+        &-title {
+            max-width: 32rem;
+        }
+
+        &-subtitle {
+            max-width: 32rem;
+            font-style: normal;
+            line-height: 2.25rem;
+            /* 150% */
+            margin: 1.8rem 0;
+        }
+
+        &-arrowIcon {
+            max-width: 1.53125rem;
+            max-height: 1.34056rem;
+        }
+
+        &-p {
+            font-style: normal;
+            line-height: 1.875rem;
+            /* 150% */
+        }
+
+        &-image {
+            max-width: 33.5625rem;
+            max-height: 58.625rem;
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,987 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+
+.carousel-caption {
+    left: 6.5% !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: static !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    opacity: 1 !important;
+    transition: opacity .15s !important;
+
+    @include for-size(31.625em) {
+        width: 6.5rem !important;
+        height: 6.5rem !important;
+    }
+}
+
+.carousel-control-prev {
+    left: 80% !important;
+    top: 80% !important;
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+.carousel-control-next {
+    top: 80% !important;
+    bottom: 0 !important;
+
+    // 1230px
+    @include for-size(76.875em) {
+        left: 90% !important;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* change transition duration to control the speed of fade effect */
+.carousel-item {
+    transition: transform .6s;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0s .6s;
+}
+
+.emprenya-home {
+
+    // HEADER(CAROUSELS) - SECTION/HEADER
+    &__carousel {
+        column-gap: 1rem;
+        position: relative;
+
+        &:has(.carousel-item.active .bg-primary) .emprenya-home__carousel-buttons {
+            background: rgba($c-primary, .8);
+        }
+
+        &:has(.carousel-item.active .bg-tertiary) .emprenya-home__carousel-buttons {
+            background: rgba($c-tertiary, .8);
+        }
+
+        &:has(.carousel-item.active .bg-primary-lighter) .emprenya-home__carousel-buttons {
+            background: rgba($c-primary-lighter, .8);
+        }
+
+        &:has(.carousel-item.active .bg-fourth) .emprenya-home__carousel-buttons {
+            background: rgba($c-fourth, .8);
+        }
+
+        &:has(.carousel-item.active .bag-secondary) .emprenya-home__carousel-buttons {
+            background: rgba($c-secondary, .8);
+        }
+
+        &:has(.carousel-item.active .bg-fifth) .emprenya-home__carousel-buttons {
+            background: rgba($c-fifth, .8);
+        }
+
+        &-mainContainer {
+            max-width: 130rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-container {
+            position: relative;
+            isolation: isolate;
+        }
+
+        &-img {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-position {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: start;
+            height: 72.5%;
+        }
+
+        &-summary {
+            color: $c-white;
+            padding: 5rem;
+        }
+
+        &-selector {
+            position: absolute;
+            top: 9.5rem;
+            left: -11.9%;
+            height: 100%;
+            width: 100%;
+            z-index: -20;
+            display: flex;
+            align-items: center;
+            column-gap: 1.2rem;
+            animation: animationFromTop 1s ease-in;
+
+            // 1307px
+            @include for-size(81.6875em) {
+                left: -10%;
+            }
+
+            // 1228px
+            @include for-size(76.75em) {
+                display: none;
+            }
+        }
+
+        &-selectorLogo {
+            width: 7rem;
+        }
+
+        &-line {
+            width: 6.875rem;
+            height: 0.30rem;
+        }
+
+        &-outHeading {
+            position: absolute;
+            padding-left: 1rem;
+            top: 16rem;
+            left: 100%;
+            width: 100%;
+            z-index: 20;
+
+            // 1230px
+            @include for-size(76.875em) {
+                display: none;
+            }
+        }
+
+        &-title {
+            @include for-size(42.5em) {
+                font-size: 2.4rem;
+            }
+        }
+
+        &-buttons {
+            position: absolute;
+            transition: background 300ms ease;
+            right: 2.5rem;
+            bottom: 0;
+
+            // 1160px {
+            @include for-size(72.5em) {
+                right: 0 !important;
+            }
+        }
+    }
+
+    // La suite emprenYA - SECTION
+    &__suite {
+        background: $c-dark-white;
+        padding: 2.8rem;
+
+
+        &-image {
+            max-width: 120rem;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // cuídateYA Presenta al rey de los productos naturales - SECTION
+    &__cuidateya {
+        background-image: url(../img/cuidateya-image.png);
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 18rem;
+        height: 59.6875rem;
+
+        // 768px
+        @include for-size(48em) {
+            height: auto;
+        }
+
+        &-position {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 100%;
+        }
+
+        &-insider {
+
+            // 959px
+            @include for-size(59.9375em) {
+                align-self: flex-end;
+            }
+        }
+
+        &-outer {
+            align-self: end;
+            margin-bottom: -10rem;
+        }
+
+        &-leftContent {
+            box-shadow: 0 1.5rem 3rem 0 rgba(0, 0, 0, 0.07);
+            background: rgba(255, 255, 255, 0.95);
+            align-items: center;
+            padding: 4rem 3.5rem;
+        }
+
+        &-leftContentP {
+            line-height: 1.1;
+            padding: 2.5rem 0;
+        }
+
+        &-logoImage {
+            max-width: 14.56975rem;
+            // height: 3.59763rem;
+        }
+
+        &-logoImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 10rem;
+            left: 49.9%;
+            width: 2.6875rem;
+        }
+
+        &-arrowImg {
+            width: 100%;
+            height: 100%;
+
+            // 768px
+            @include for-size(48em) {
+                display: none;
+            }
+        }
+
+        &-3arrows {
+            position: absolute;
+            top: 39rem;
+            left: 41%;
+            width: 4.6875rem;
+            height: 2.5rem;
+        }
+
+        &-3arrowsImg {
+            width: 100%;
+            height: 100%;
+
+            // 1061px
+            @include for-size(66.3125em) {
+                display: none;
+            }
+        }
+
+        &-naturkinLogoImage {
+            margin: 0 auto;
+            max-width: 18.48425rem;
+            // height: 10.625rem;
+        }
+
+        &-naturkinLogoImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-rightContent {
+            background: rgba(103, 206, 187, 0.95);
+            box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.07);
+            padding: 4rem 4rem 2.7rem 4rem;
+
+            // 934px
+            @include for-size(58.375em) {
+                padding: 1.5rem 3rem 1.5rem 3rem;
+            }
+        }
+    }
+
+    // impulsaYA ¿Cuál es la clave para tener resultados a través de lo digital además de la formación? - SECTION
+    &__impulsaya {
+        background: url(../img/impulsaYA-shapes.png);
+        background-position: center;
+        background-size: cover;
+
+        &-title {
+            margin: 0 auto;
+            max-width: 23.33956rem;
+        }
+
+        &-titleImg {
+            height: 100%;
+            width: 100%;
+        }
+
+        &-p {
+            margin: 2rem auto 2rem auto;
+            text-align: center;
+            max-width: 60rem;
+        }
+
+        &-image {
+            max-width: 40.125rem;
+            position: relative;
+
+            // 768px 
+            @include for-size(48em) {
+                margin: 0 auto 6rem auto;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &-content {
+            background: rgba(13, 68, 151, 0.80);
+            padding: 2.9rem 2rem 0 2rem;
+            text-align: center;
+            color: $c-white;
+        }
+
+        &-contentLogo {
+            max-width: 18.5625rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20rem;
+        }
+
+        &-contentLogoImg {
+            display: inline-block;
+            width: 100%;
+        }
+
+        &-contentButton {
+            transform: translateY(1rem);
+
+        }
+
+        &-button {
+            display: inline-block;
+
+            // 1040px
+            @include for-size(65em) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-p2 {
+            margin: 5.5rem auto 0 auto;
+            text-align: center;
+            max-width: 55rem;
+
+            // 768px 
+            @include for-size(48em) {
+                margin: 0 auto 0 auto;
+            }
+        }
+    }
+
+    // lanzaYA Convertimos cualquier idea de negocio en una realidad - SECTION
+    &__lanzaya {
+        padding: 10rem 0;
+        overflow-x: hidden!important;
+
+
+        &-shapes {
+            position: relative;
+
+        }
+
+        &-shape1 {
+            position: absolute;
+
+            z-index: -100;
+            top: -8rem;
+            left: -13%;
+
+            // 410px
+            @include for-size(25.625em) {
+                left: 55%;
+            }
+        }
+
+        &-shape1Img {
+            width: 11.73675rem;
+        }
+
+        &-shape2 {
+            position: absolute;
+            z-index: -100;
+            top: -8rem;
+            right: -10%;
+
+            // 410px
+            @include for-size(25.625em) {
+                top: 60rem;
+            }
+        }
+
+        &-shape2Img {
+            width: 17.49575rem;
+        }
+
+        &-logoImage {
+            max-width: 18.24156rem;
+        }
+
+        &-logoImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-subheading {
+            color: $c-gray;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &-title {
+            color: $c-fourth;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &-articleOne {
+            margin-top: 7rem;
+
+            @include for-size(41.25em) {
+                margin-top: 0;
+            }
+        }
+
+        &-articleTwo {
+            margin-top: 2rem;
+
+            @include for-size(41.25em) {
+                margin-top: 0;
+            }
+        }
+
+        &-articleThree {
+            margin-top: 5rem;
+
+            @include for-size(41.25em) {
+                margin-top: 0;
+            }
+        }
+
+        &-image {
+            max-width: 28.8rem;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-contentCard {
+            box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.07);
+            padding: 1.5rem 2rem;
+            background: $c-white;
+        }
+
+        &-contentCardText {
+            color: $c-gray;
+            text-align: center;
+            font-style: normal;
+            line-height: 1.7;
+        }
+
+        &-button {
+            text-align: center;
+            margin: 5.5rem 0 5rem 0;
+        }
+    }
+
+    // aprenYA La escuela de las profesiones del presente y futuro - SECTION
+    &__aprenya {
+        background-image: url(../img/aprenya-image.png);
+        background-position: center top;
+        background-size: cover;
+        margin-bottom: 18rem;
+        height: 59.6875rem;
+
+        // 768px
+        @include for-size(48em) {
+            height: auto;
+            margin-bottom: 5rem;
+        }
+
+        &-position {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 100%;
+        }
+
+        &-outer {
+
+            // 959px
+            @include for-size(59.9375em) {
+                align-self: flex-end;
+            }
+        }
+
+        &-insider {
+            align-self: end;
+            margin-bottom: -10rem;
+
+            // 768px
+            @include for-size(48em) {
+                margin-bottom: 0;
+            }
+        }
+
+        &-rightContent {
+            box-shadow: 0 1.5rem 3rem 0 rgba(0, 0, 0, 0.07);
+            background: rgba(255, 255, 255, 0.95);
+            align-items: center;
+            padding: 4rem 3.5rem;
+        }
+
+        &-rightContentP {
+            padding: 2rem 0;
+            line-height: 1.4;
+        }
+
+        &-logoNinjaImage {
+            max-width: 22.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-logoNinjaImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 10rem;
+            left: 47.6%;
+            width: 2.6875rem;
+        }
+
+        &-arrowImg {
+            width: 100%;
+            height: 100%;
+
+            // 768px
+            @include for-size(48em) {
+                display: none;
+            }
+        }
+
+        &-3arrows {
+            position: absolute;
+            top: 45rem;
+            left: 51.5%;
+            width: 4.6875rem;
+            height: 2.5rem;
+        }
+
+        &-3arrowsImg {
+            width: 100%;
+            height: 100%;
+
+            // 1061px
+            @include for-size(66.3125em) {
+                display: none;
+            }
+        }
+
+        &-logoImage {
+            max-width: 18.48425rem;
+        }
+
+        &-logoImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-leftContent {
+            background: rgba(255, 180, 0, 0.95);
+            box-shadow: 0 1.5rem 3rem 0 rgba(0, 0, 0, 0.07);
+            padding: 4rem 4rem 2.7rem 4rem;
+
+            // 934px
+            @include for-size(58.375em) {
+                padding: 2.5rem 3rem 2.5rem 3rem;
+            }
+        }
+    }
+
+    // blockchainYA La tecnología blockchain tiene un gran crecimiento en los últimos años - SECTION
+    &__blockchainya {
+        background: url(../img/blockchainya-shapes.png);
+        background-position: center center;
+        background-size: cover;
+
+        &-logoImage {
+            max-width: 29.53794rem;
+            margin: 0 auto;
+        }
+
+        &-logoImg {
+            height: 100%;
+            width: 100%;
+        }
+
+        &-background {
+            background: url(../img/blockchainya-image.png);
+            background-position: center center;
+            background-size: cover;
+            height: 36.625rem;
+            position: relative;
+        }
+
+        &-bgOverlay {
+            background: rgba(255, 78, 55, 0.80);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+        }
+
+        &-bgOverlayText {
+            max-width: 70rem;
+            margin: 0 auto;
+            padding: 2.5rem 2.5rem 1rem 2.5rem;
+        }
+
+        &-bgOverlayButton {
+            transform: translateY(1.5rem);
+        }
+    }
+
+    // emprenYA un negocio inteligente - SECTION
+    &__negocio {
+        background: url(../img/negocio-inteligente-shapes.png);
+        background-position: center center;
+        background-size: cover;
+        padding: 5rem 0;
+
+        &-content {
+            color: $c-white;
+            position: relative;
+        }
+
+        &-borderImage {
+            // width: 33.5rem;
+            height: 13.3rem;
+        }
+
+        &-border {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-borderContent {
+            position: absolute;
+            top: -3rem;
+            left: 7%;
+        }
+
+        &-title {
+            color: $c-secondary;
+            font-style: normal;
+            line-height: normal;
+
+            // 403px
+            @include for-size(25.1875em) {
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+
+        &-titleLogo {
+            max-width: 22.39144rem;
+        }
+
+        &-p {
+            font-style: normal;
+            line-height: 1.875rem;
+        }
+
+        &-image {
+            height: 6.3rem;
+            margin-bottom: 1.8rem;
+        }
+
+    }
+
+    // ¿Por qué puedes confiar en emprenYA? - SECTION
+    &__porque {
+        background-image: url(../img/confiar-emprenya.png);
+        background-position: center center;
+        background-size: cover;
+        margin: 5rem 0;
+
+        &-image {
+            max-width: 30rem;
+            margin-left: -2rem;
+            transform: translateY(-1.75rem);
+
+            // 1110px
+            @include for-size(69.375em) {
+                margin-left: 0;
+                transform: translateY(0);
+            }
+
+            // 768px
+            @include for-size(48em) {
+                margin: 0 auto;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-content {
+            box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.07);
+            background: $c-white;
+            max-width: 30rem;
+
+            // 768px
+            @include for-size(48em) {
+                max-width: 40rem;
+                margin: 0 auto;
+            }
+        }
+
+        &-contentP {
+            padding: 0 2rem 2rem 3rem;
+
+            /// 1110px
+            @include for-size(69.375em) {
+                margin-top: 1.4rem;
+            }
+
+            // 768px
+            @include for-size(48em) {
+                text-align: center;
+            }
+        }
+    }
+
+    // emprenYA - Nuestra Promesa - SECTION
+    &__promesa {
+        background: $c-white;
+        padding-bottom: 3.5rem;
+
+        &-image {
+            max-width: 39.5rem;
+
+            @include for-size(48em) {
+                margin: 0 auto 3.5rem auto;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-handsPosition {
+            position: relative;
+        }
+
+        &-handsImage {
+            position: absolute;
+            top: 50%;
+            right: 55%;
+            transform: translate(50%, 33.3rem);
+        }
+
+        &-handsImg {
+            width: 10rem;
+            height: 8.25rem;
+
+            @include for-size(49.5em) {
+                display: none;
+            }
+        }
+
+        &-content {
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        &-logoImage {
+            max-width: 13.8125rem;
+            height: 3.0925rem;
+        }
+
+        &-logoImg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Programa de marketing de Afiliados de emprenYA - SECTION
+    &__marketing {
+        background: $c-light-white;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &-heading {
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+
+        &-subheading {
+            margin: 2rem auto 0 auto;
+            max-width: 90rem;
+        }
+
+        &-icon {
+            width: 5.9375rem;
+            height: 5.9375rem;
+        }
+
+        &-titleCard {
+            color: $c-primary;
+            font-style: normal;
+            line-height: normal;
+            margin: 2rem 0;
+        }
+
+        &-contentCard {
+            color: $c-gray;
+            font-style: normal;
+            line-height: 1.75;
+            padding: 0 1rem;
+        }
+
+    }
+
+    // Preguntas Frecuentes - SECTION
+    &__faq {
+        padding: 5rem 0;
+
+        &-container {
+            padding: 0 1.5rem;
+        }
+
+        &-image {
+            height: 36rem;
+            margin: 0 auto;
+            max-width: 22.5rem;
+        }
+
+        &-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-subheading {
+            display: flex;
+            align-items: center;
+            column-gap: .25rem;
+            padding-right: 12.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        &-carouselButton {
+            background-color: $c-primary;
+            padding: 2rem 3rem;
+            border: 0;
+        }
+
+        &-content {
+            padding: 2.5rem 2.5rem 3rem 2.5rem;
+            background: $c-light-white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 1.875rem;
+            min-height: 36rem;
+            line-height: 1.9;
+            margin-right: 2.5rem;
+            margin: 0 auto;
+            max-width: 22.5rem;
+
+            @include for-size(58.875em) {
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.emprenya-home__faq-carousel {
+    position: relative;
+}
+
+.emprenya-home__faq-carousel .priv_arrow,
+.emprenya-home__faq-carousel .next_arrow {
+    position: absolute;
+    background: $c-primary !important;
+    display: inline-block !important;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+}
+
+.emprenya-home__faq-carousel .priv_arrow {
+    top: -9rem;
+    right: 7.5rem;
+}
+
+.emprenya-home__faq-carousel .next_arrow {
+    top: -9rem;
+    right: 2rem;
+}
+
+.slick-dots {
+    list-style: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    margin-top: 3.5rem !important;
+}
+
+
+.slick-dots li {
+    display: inline-block !important;
+}
+
+.slick-dots li button {
+    background: $c-darker-white !important;
+    font-size: 0 !important;
+    border-radius: 3.125rem !important;
+    border: none !important;
+    padding: .5rem 1.5rem !important;
+}
+
+.slick-dots .slick-active button {
+    background: $c-primary !important;
+}

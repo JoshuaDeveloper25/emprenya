@@ -1,0 +1,83 @@
+$c-primary-light: #4075C4;
+$c-primary: #2B66BE;
+$c-primary-transparent: rgba(43, 102, 190, 0.90);
+$c-primary-dark: #002051;
+$c-primary-dark-2: #275292;
+
+$c-primary-lighter: #69B2F3;
+
+$c-secondary: #FFB400;
+$c-tertiary: #67CEBB;
+$c-fourth: #9D81D9;
+$c-fifth: #FF4E37;
+
+$c-darker-white: #D9D9D9;
+$c-dark-white: #F3F7F9;
+$c-light-white: #F6F6F6;
+$c-light-white2: #F5F5F5;
+$c-white: #FFF;
+$c-gray: #7C838E;
+
+.c-primary {
+    color: $c-primary;
+}
+
+.c-primary-lighter {
+    color: $c-primary-lighter;
+}
+
+.bg-light-white {
+    background: $c-light-white
+}
+
+.bg-primary-light {
+    background-color: $c-primary-light;
+}
+
+.bg-primary {
+    background-color: $c-primary;
+}
+
+.bg-primary-lighter {
+    background: $c-primary-lighter;
+}
+
+.bg-fourth {
+    background: $c-fourth;
+}
+
+.c-fifth {
+    color: $c-fifth;
+}
+
+.c-white {
+    color: $c-white;
+}
+
+.c-secondary {
+    color: $c-secondary;
+}
+
+.c-tertiary {
+    color: $c-tertiary;
+}
+
+.bg-tertiary {
+    background: $c-tertiary;
+}
+
+.bg-fifth {
+    background: $c-fifth;
+}
+
+.bag-secondary {
+    background: $c-secondary;
+}
+
+.c-gray {
+    color: $c-gray;
+}
+
+.c-dark-white {
+    background-color: $c-dark-white;
+}
