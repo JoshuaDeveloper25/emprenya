@@ -13,7 +13,8 @@
             padding: 0 1.5rem;
         }
 
-        @include for-size('tablet-landscape-up') {
+        // 1000px
+        @include for-size(62.5em) {
             flex-direction: column;
         }
     }
@@ -28,7 +29,7 @@
 
         // 448px
         @include for-size(28em) {
-            height: 4rem;
+            // height: 4rem;
             width: 15rem;
             margin-bottom: 1rem;
         }
@@ -39,8 +40,8 @@
         justify-content: center;
         gap: 2rem;
 
-        // 448px
-        @include for-size(28em) {
+        // 720px
+        @include for-size(45em) {
             flex-direction: column;
         }
 
@@ -49,7 +50,8 @@
         }
 
         &-img {
-            height: 2.3rem;
+            // width: 10rem;
+            // height: 2.7rem;
         }
     }
 }

@@ -12,7 +12,7 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @include for-size('tablet-portrait-up') {
     font-size: 56.25%;

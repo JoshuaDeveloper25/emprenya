@@ -9,7 +9,6 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 @media (max-width: 37.5em) {
   html {
@@ -488,7 +487,7 @@ body {
     padding: 0 1.5rem;
   }
 }
-@media (max-width: 56.25em) {
+@media (max-width: 62.5em) {
   .emprenya-tools__flex {
     flex-direction: column;
   }
@@ -504,7 +503,6 @@ body {
 }
 @media (max-width: 28em) {
   .emprenya-tools__main-logo {
-    height: 4rem;
     width: 15rem;
     margin-bottom: 1rem;
   }
@@ -514,7 +512,7 @@ body {
   justify-content: center;
   gap: 2rem;
 }
-@media (max-width: 28em) {
+@media (max-width: 45em) {
   .emprenya-tools__ya {
     flex-direction: column;
   }
@@ -522,10 +520,6 @@ body {
 .emprenya-tools__ya-image {
   text-align: center;
 }
-.emprenya-tools__ya-img {
-  height: 2.3rem;
-}
-
 .emprenya-afiliados__header {
   background: url(../img/afiliar-header.png);
   background-position: center top;
