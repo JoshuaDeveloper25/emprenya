@@ -1,4 +1,5 @@
 @use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
 
 .emprenya-tools {
 
@@ -17,22 +18,16 @@
         @include for-size(62.5em) {
             flex-direction: column;
         }
+
+        // 720px
+        @include for-size(45em) {
+            padding-left: 0;
+        }
     }
 
     &__main-logo {
         height: 4.9rem;
         width: 22.1rem;
-
-        @include for-size('tablet-landscape-up') {
-            margin-bottom: 2rem;
-        }
-
-        // 448px
-        @include for-size(28em) {
-            // height: 4rem;
-            width: 15rem;
-            margin-bottom: 1rem;
-        }
     }
 
     &__ya {
@@ -43,10 +38,16 @@
         // 720px
         @include for-size(45em) {
             flex-direction: column;
+            padding-left: 2rem;
         }
 
         &-image {
             text-align: center;
+
+            // 720px
+            @include for-size(45em) {
+                text-align: start;
+            }
         }
 
         &-img {
@@ -54,4 +55,29 @@
             // height: 2.7rem;
         }
     }
+
+    &__ya-image {
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__navbar-small {
+        // 720px
+        @include for-size(45em) {
+            display: none;
+        }
+    }
+}
+
+.navbar {
+    padding: 0!important;
+}
+
+.btn-close {
+    filter: brightness(0) invert(1) !important;
+    
 }

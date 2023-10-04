@@ -10,6 +10,21 @@
         padding: 0 1.5rem;
     }
 
+    // 720px
+    @include for-size(45em) {
+        background-color: unset;
+        padding: 0;
+    }
+
+    &__small {
+        display: flex;
+
+        // 720px
+        @include for-size(45em) {
+            flex-direction: column;
+        }
+    }
+
     &__flex {
         display: flex;
         justify-content: space-between;
@@ -33,6 +48,16 @@
         @include for-size(55.625em) {
             font-size: 1.3rem;
         }
+
+
+    }
+
+    &__gmail-small {
+
+        // 720px
+        @include for-size(45em) {
+            display: none;
+        }
     }
 
     &__list {
@@ -45,22 +70,36 @@
             margin-top: 1.5rem;
         }
 
+        // 720px
+        @include for-size(45em) {
+            display: unset;
+        }
+
         // 515px
-        @include for-size(32.1875em) {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 1rem;
+        // @include for-size(32.1875em) {
+        //     flex-direction: column;
+        //     align-items: center;
+        //     margin-bottom: 1rem;
+        // }
+    }
+
+    &__list-small {
+        display: flex;
+
+        // 720px
+        @include for-size(45em) {
+            display: none;
         }
     }
 
     &__lists {
         display: flex;
         list-style: none;
+        border-right: none;
 
-        // 515px
-        @include for-size(32.1875em) {
-            border-right: none;
-            margin: 1rem 0;
+        // 720px
+        @include for-size(45em) {
+            padding-left: 0;
         }
     }
 
@@ -71,20 +110,14 @@
         color: $c-white;
         font-weight: 500;
 
-        // 890px
-        @include for-size(55.625em) {
-            font-size: 1.1rem;
+        &:hover {
+            background: $c-primary-dark;
         }
 
-        // 651px
-        @include for-size(40.6875em) {
-            padding-right: .5rem;
-            padding-left: .5rem;
-        }
-
-        // 515px
-        @include for-size(32.1875em) {
-            font-size: 1.3rem;
+        // 720px
+        @include for-size(45em) {
+            display: inline-block;
+            width: 100%;
         }
     }
 
@@ -102,8 +135,21 @@
 
         &-icon {
             margin-left: .6rem;
-            width: 1.4rem;
-            height: 1.4rem;
+            height: 2rem;
+
+            // 720px
+            @include for-size(45em) {
+                height: 2.5rem;
+            }
+        }
+    }
+
+    &__navbar-small {
+        display: none;
+
+        // 720px
+        @include for-size(45em) {
+            display: flex;
         }
     }
 }
