@@ -2019,6 +2019,7 @@ body {
   background-image: url(../img/excelencia-shapes.png);
   background-position: center center;
   background-size: cover;
+  overflow-x: hidden;
 }
 .emprenya-inicia-negocio__excelencia-shapes {
   position: relative;
